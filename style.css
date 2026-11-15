@@ -99,6 +99,11 @@ footer {
   background: #172554;
   color: white;
 }
+
+ .dark-mode{
+    background-color: #121212;
+    color: red;
+ }
 /*laptops: 1024 and more*/
 @media screen and (min-width: 1024px) {
 
