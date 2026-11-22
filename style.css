@@ -28,7 +28,6 @@ body {
     color: var(--text-color);
     transition: background 0.3s, color 0.3s;
 }
-
 table {
     color: var(--text-color);
 }
@@ -263,4 +262,84 @@ button {
     .label {
         font-size: 12px;
     }
+}
+
+
+/* Confetti container */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* confetti pieces */
+.confetti {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 15px;
+    opacity: 0.9;
+    animation: fall linear forwards;
+}
+
+/* Confetti  animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* Countdown Timer */
+.countdown-section {
+    text-align: center;
+    padding: 30px 15px;
+    margin: 30px auto;
+}
+
+.countdown-section h2 {
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: linear-gradient(145deg, #1673f5, #0750c7);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 65px;
+    box-shadow: 0 6px 15px #003b9b40;
+}
+
+.time-box span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.time-box p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: white;
+}
+
+#countdown-message {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent-color);
 }
